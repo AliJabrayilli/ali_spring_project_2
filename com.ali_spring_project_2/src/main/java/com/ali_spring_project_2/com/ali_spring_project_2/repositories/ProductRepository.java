@@ -1,0 +1,12 @@
+package com.ali_spring_project_2.com.ali_spring_project_2.repositories;
+
+import com.ali_spring_project_2.com.ali_spring_project_2.models.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    List<Product> findByCategory(String category);
+    List<Product> findByUserId(Long userId);
+
+}
