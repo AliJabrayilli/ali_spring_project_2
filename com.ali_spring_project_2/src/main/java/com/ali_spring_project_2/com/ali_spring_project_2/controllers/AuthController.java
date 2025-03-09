@@ -1,6 +1,8 @@
 package com.ali_spring_project_2.com.ali_spring_project_2.controllers;
 
-import org.apache.catalina.User;
+import com.ali_spring_project_2.com.ali_spring_project_2.models.LoginForm;
+import com.ali_spring_project_2.com.ali_spring_project_2.models.User;
+import com.ali_spring_project_2.com.ali_spring_project_2.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -35,16 +37,11 @@ public class AuthController {
 
     @PostMapping("/login-process") // Обрабатывает POST-запросы по адресу "/login"
     public String loginUser(@ModelAttribute(name="loginForm") LoginForm loginForm, Model model) {
-        try {
 
-            // Аутентификация пользователя
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                    loginForm.getUsername(), loginForm.getPassword()));
-            return "redirect:/home"; // Перенаправляем на главную страницу после успешной аутентификации
-        } catch (AuthenticationException e) {
-            model.addAttribute("error", "Неправильное имя пользователя или пароль."); // Сообщение об ошибке
-            return "login"; // Возвращаем на страницу входа
-        }
+        // Аутентификация пользователя
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+                loginForm.getUsername(), loginForm.getPassword()));
+        return "redirect:/home"; // Перенаправляем на главную страницу после успешной аутентификации
     }
 
     @PostMapping("/register")

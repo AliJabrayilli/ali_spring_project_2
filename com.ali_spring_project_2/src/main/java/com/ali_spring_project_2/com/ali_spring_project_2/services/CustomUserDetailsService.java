@@ -2,7 +2,7 @@ package com.ali_spring_project_2.com.ali_spring_project_2.services;
 
 import com.ali_spring_project_2.com.ali_spring_project_2.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
+import com.ali_spring_project_2.com.ali_spring_project_2.models.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

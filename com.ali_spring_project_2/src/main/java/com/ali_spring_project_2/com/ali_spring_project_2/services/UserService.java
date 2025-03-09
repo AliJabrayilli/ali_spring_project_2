@@ -1,10 +1,10 @@
 package com.ali_spring_project_2.com.ali_spring_project_2.services;
 
 import com.ali_spring_project_2.com.ali_spring_project_2.models.Authority;
+import com.ali_spring_project_2.com.ali_spring_project_2.models.User;
 import com.ali_spring_project_2.com.ali_spring_project_2.repositories.AuthorityRepository;
 import com.ali_spring_project_2.com.ali_spring_project_2.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

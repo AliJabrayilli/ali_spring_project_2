@@ -5,14 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.security.core.userdetails.User;
 
 import java.time.LocalDate;
 
 @Entity // Убедитесь, что аннотация присутствует
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @Table(name = "products") // Указывает имя таблицы
@@ -31,9 +27,9 @@ public class Product {
     @Column(nullable = false)
     private int stock; // Количество на складе
 
+
     @Column(nullable = false)
     private String imagePath;
-
     @Column(name = "sales_per_day", nullable = false)
     private int salesPerDay; // Продажи в день
 

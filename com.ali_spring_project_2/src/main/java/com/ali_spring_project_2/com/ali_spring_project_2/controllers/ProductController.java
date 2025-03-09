@@ -1,8 +1,11 @@
 package com.ali_spring_project_2.com.ali_spring_project_2.controllers;
 
+import com.ali_spring_project_2.com.ali_spring_project_2.models.Product;
+import com.ali_spring_project_2.com.ali_spring_project_2.repositories.UserRepository;
+import com.ali_spring_project_2.com.ali_spring_project_2.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.User;
+import com.ali_spring_project_2.com.ali_spring_project_2.models.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +14,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/products")

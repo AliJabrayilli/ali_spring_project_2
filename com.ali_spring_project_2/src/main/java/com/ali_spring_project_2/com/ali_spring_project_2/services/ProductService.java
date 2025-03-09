@@ -6,10 +6,10 @@ import com.ali_spring_project_2.com.ali_spring_project_2.repositories.ProductRep
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.awt.print.Pageable;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -20,7 +20,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    private final String uploadDir = "C:\\Users\\user\\Documents\\GitHub\\mehebbet_spring_project_5\\mehebbet_spring_project_5\\uploads/";
+    private final String uploadDir = "C:\\Users\\Acer\\Documents/GitHub\\ali_spring_project_2\\ali_spring_project_2\\uploads/";
 
     public Product addProduct(Product product, MultipartFile imageFile) throws IOException {
         // Define the upload directory (you might want to use an absolute path here)

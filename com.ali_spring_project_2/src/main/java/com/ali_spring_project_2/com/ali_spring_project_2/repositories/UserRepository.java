@@ -1,7 +1,7 @@
 package com.ali_spring_project_2.com.ali_spring_project_2.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.security.core.userdetails.User;
+import com.ali_spring_project_2.com.ali_spring_project_2.models.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
